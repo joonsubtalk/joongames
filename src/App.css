@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Pangolin");
+.o-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 525px;
+  width: 360px;
+  margin: 0 auto;
+  background-color: #e7e7e7; }
+  .o-stage__container {
+    height: 525px;
+    width: 360px; }
+  .o-stage__camera {
+    height: 465px;
+    width: 100%; }
+
+.o-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  height: 60px; }
+  .o-header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .25em 0; }
+  .o-header__bottom {
+    align-items: center;
+    width: 100%; }
+
+.o-timer {
+  height: 20px;
+  width: 360px;
+  background-color: #a7a7a7;
+  display: flex;
+  justify-content: center;
+  align-self: center; }
+  .o-timer__bracket {
+    width: 350px;
+    height: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center; }
+  .o-timer__timeLeft {
+    width: 350px;
+    height: 10px;
+    background-color: #f76379;
+    position: absolute; }
+  .o-timer__timePassed {
+    background-color: #a3cfb1;
+    width: 350px;
+    height: 10px;
+    position: absolute; }
+
+body {
+  font-size: 21px;
+  font-family: 'Pangolin', sans-serif; }

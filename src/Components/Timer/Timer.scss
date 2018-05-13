@@ -1,0 +1,34 @@
+@import '../../configs/SHARED.scss';
+
+.o-timer {
+    $TIMER_HEIGHT: 20;
+
+    height: #{$TIMER_HEIGHT}px;
+    width: #{$GAME_WIDTH}px;
+    background-color: $TIMER_BG;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    &__bracket {
+        width: #{$GAME_WIDTH - 10}px;
+        height: #{$TIMER_HEIGHT - 10}px;
+        display: flex;
+        justify-content: flex-end;
+        align-self: center;
+    }
+
+    &__timeLeft {
+        width: #{$GAME_WIDTH - 10}px;
+        height: #{$TIMER_HEIGHT - 10}px;
+        background-color: $TIMER_LEFT;
+        position: absolute;
+    }
+
+    &__timePassed {
+        background-color: $TIMER_PASSED;
+        width: #{$GAME_WIDTH - 10}px;
+        height: #{$TIMER_HEIGHT - 10}px;
+        position: absolute;
+    }
+}

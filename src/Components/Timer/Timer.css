@@ -1,0 +1,23 @@
+.o-timer {
+  height: 20px;
+  width: 360px;
+  background-color: #a7a7a7;
+  display: flex;
+  justify-content: center;
+  align-self: center; }
+  .o-timer__bracket {
+    width: 350px;
+    height: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center; }
+  .o-timer__timeLeft {
+    width: 350px;
+    height: 10px;
+    background-color: #f76379;
+    position: absolute; }
+  .o-timer__timePassed {
+    background-color: #a3cfb1;
+    width: 350px;
+    height: 10px;
+    position: absolute; }

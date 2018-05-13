@@ -1,0 +1,16 @@
+.o-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  height: 60px; }
+  .o-header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .25em 0; }
+  .o-header__bottom {
+    align-items: center;
+    width: 100%; }

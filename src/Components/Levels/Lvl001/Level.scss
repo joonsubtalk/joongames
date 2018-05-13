@@ -1,0 +1,21 @@
+@import 'src/configs/SHARED.scss';
+
+.o-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: #{$GAME_HEIGHT}px;
+    width: #{$GAME_WIDTH}px;
+    margin: 0 auto;
+    background-color: $COLOR_0GRAY;
+
+    &__container {
+        height: #{$GAME_HEIGHT}px;
+        width: #{$GAME_WIDTH}px;
+    }
+
+    &__camera{
+        height: #{$GAME_HEIGHT - 60}px;
+        width: 100%;
+    }
+}

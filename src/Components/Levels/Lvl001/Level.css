@@ -1,0 +1,14 @@
+.o-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 525px;
+  width: 360px;
+  margin: 0 auto;
+  background-color: #e7e7e7; }
+  .o-stage__container {
+    height: 525px;
+    width: 360px; }
+  .o-stage__camera {
+    height: 465px;
+    width: 100%; }
