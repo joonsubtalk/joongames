@@ -1,0 +1,11 @@
+.c-character {
+  position: relative;
+  font-size: 1rem;
+  width: 2em;
+  height: 2em; }
+  .c-character__head {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute; }

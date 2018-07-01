@@ -1,0 +1,15 @@
+.c-character {
+    position: relative;
+    font-size: 1rem;
+    $SIZE: 2em;
+    width: $SIZE;
+    height: $SIZE;
+
+    &__head {
+        width: $SIZE;
+        height: $SIZE;
+        border-radius: 50%;
+        background-color: black;
+        position: absolute;
+    }
+}

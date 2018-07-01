@@ -7,7 +7,8 @@
     height: #{$GAME_HEIGHT}px;
     width: #{$GAME_WIDTH}px;
     margin: 0 auto;
-    background-color: $COLOR_0GRAY;
+    font-size: 1rem;
+    //background-color: $COLOR_0GRAY;
 
     &__container {
         height: #{$GAME_HEIGHT}px;
@@ -17,5 +18,26 @@
     &__camera{
         height: #{$GAME_HEIGHT - 60}px;
         width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__buttons {
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 3em);
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: .25em;
+        padding: .25em;
+    }
+
+    &__button {
+        font-size: 2em;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: #9e9e9e;
+        cursor: pointer;
+        user-select: none;
     }
 }
