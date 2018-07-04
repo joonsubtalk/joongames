@@ -1,0 +1,75 @@
+.c-character {
+    font-size: 1rem;
+    $SIZE: 4em;
+    
+    width: $SIZE + 1;
+    height: $SIZE + 1;
+    position: relative;
+    left: 0;
+    top: 0;
+
+    &__head {
+        width: $SIZE;
+        height: $SIZE;
+        border-radius: 50%;
+        background-color: $COLOR_0BLACK;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__fronthead {
+        width: $SIZE - .5;
+        height: $SIZE - .5;
+        border-radius: 50%;
+        background-color: $COLOR_0GRAY;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__frontshadow {
+        overflow: hidden;
+        width: $SIZE - .5;
+        height: $SIZE - .5;
+        border-radius: 50%;
+        background-color: $COLOR_1GRAY;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    %eye-shared {
+        width: $SIZE/8;
+        height: $SIZE/8;
+        border-radius: 50%;
+        background-color: $COLOR_1BLACK;
+        animation: blink 3s infinite ease-in;
+    }
+    &__lefteye {
+        @extend %eye-shared;
+        position: absolute;
+        left: 35%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+    &__righteye {
+        @extend %eye-shared;
+        position: absolute;
+        left: 65%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+    &__shadow {
+        width: $SIZE;
+        height: $SIZE / 4;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+

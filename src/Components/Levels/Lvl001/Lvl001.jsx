@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../../Header/Header';
 import Character from '../../Characters/Character';
+import Spark from '../../Spark/Spark';
+import Bud from '../../Bud/Bud';
 
 class Level001 extends Component {
 
@@ -56,18 +58,8 @@ class Level001 extends Component {
                     <div className="o-stage__camera">
 
                         <Character />
-
-                        <div className="o-stage__buttons">
-                            <button onClick={this.btnHandler} className="o-stage__button">1</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">2</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">3</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">4</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">5</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">6</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">7</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">8</button>
-                            <button onClick={this.btnHandler} className="o-stage__button">9</button>
-                        </div>
+                        <Spark />
+                        <Bud />
 
                     </div>
 

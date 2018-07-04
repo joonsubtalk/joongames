@@ -1,0 +1,152 @@
+.c-spark {
+    font-size: 1rem;
+    $SIZE: 4em;
+    
+    width: $SIZE + 1;
+    height: $SIZE + 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    $ANIMATIONTIME: 1.5s;
+
+    &__head {
+        width: $SIZE;
+        height: $SIZE;
+        border-radius: 50%;
+        background-color: $COLOR_4RED;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__fronthead {
+        width: $SIZE - .5;
+        height: $SIZE - .5;
+        border-radius: 50%;
+        background-color: $COLOR_RED;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__frontshadow {
+        overflow: hidden;
+        width: $SIZE - .5;
+        height: $SIZE - .5;
+        border-radius: 50%;
+        background-color: $COLOR_3RED;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    %eye-shared {
+        width: $SIZE/8;
+        height: $SIZE/8;
+        border-radius: 50%;
+        background-color: $COLOR_4RED;
+        animation: blink 3s infinite ease-in;
+    }
+    &__lefteye {
+        @extend %eye-shared;
+        position: absolute;
+        left: 35%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+    &__righteye {
+        @extend %eye-shared;
+        position: absolute;
+        left: 65%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+    &__shadow {
+        width: $SIZE;
+        height: $SIZE / 4;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__mouth {
+        height: $SIZE;
+        width: $SIZE / 4;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -100%);
+        border: .1em solid $COLOR_4RED;
+    }
+    &__mouthcontainer {
+        height: $SIZE / 6;
+        width: $SIZE / 4;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__flames {
+        position: absolute;
+        bottom: 30%;
+        left:50%;
+        width: 70%;
+        height: 70%;
+        //background-color:$red;
+        transform:translateX(-50%)rotate(45deg);
+    }
+    &__flame {
+        position: absolute;
+        right:0%;
+        bottom:0%;
+        width:0%;
+        height:0%;
+        background-color: $COLOR_YELLOW;
+        border-radius:1vw;
+
+        &:nth-child(2n + 1) {
+           animation: flameodd $ANIMATIONTIME ease-in infinite;
+        }
+        &:nth-child(2n) {
+           animation: flameeven $ANIMATIONTIME ease-in infinite;
+        }
+        &:nth-child(1) {
+           animation-delay:0s;
+        }
+        &:nth-child(2) {
+           animation-delay:$ANIMATIONTIME/4;
+        }
+        &:nth-child(3) {
+           animation-delay:$ANIMATIONTIME/4 * 2;
+        }
+        &:nth-child(4) {
+           animation-delay:$ANIMATIONTIME/4 * 3;
+        }
+    }
+
+    // &__mouth {
+    //     height: $SIZE;
+    //     width: $SIZE / 4;
+    //     border-radius: 50%;
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -100%);
+    //     background-color: red;
+    // }
+    // &__mouthcontainer {
+    //     height: $SIZE / 6;
+    //     width: $SIZE / 4;
+    //     overflow: hidden;
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 75%;
+    //     transform: translate(-50%, -50%);
+    // }
+}

@@ -1,0 +1,59 @@
+@keyframes blink {
+  0% {
+    height: .5em; }
+  4% {
+    height: 0em; }
+  8%, 100% {
+    height: .5em; } }
+
+@keyframes flameodd {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 1%;
+    bottom: 2%; }
+  100% {
+    right: 150%;
+    bottom: 170%; } }
+
+@keyframes flameeven {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 2%;
+    bottom: 1%; }
+  100% {
+    right: 170%;
+    bottom: 150%; } }

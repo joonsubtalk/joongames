@@ -1,0 +1,53 @@
+.c-character {
+  font-size: 1rem;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  left: 0;
+  top: 0; }
+  .c-character__head {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: black;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .c-character__fronthead {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .c-character__frontshadow {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .c-character__lefteye {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 35%;
+    top: 60%;
+    transform: translate(-50%, -50%); }
+  .c-character__righteye {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 65%;
+    top: 60%;
+    transform: translate(-50%, -50%); }
