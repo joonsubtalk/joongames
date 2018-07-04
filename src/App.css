@@ -7,6 +7,28 @@
   8%, 100% {
     height: .5em; } }
 
+@keyframes flap {
+  0% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); }
+  50% {
+    bottom: 0%;
+    transform: skew(-50deg) rotate(45deg); }
+  100% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); } }
+
+@keyframes flapBack {
+  0% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+  50% {
+    top: 61%;
+    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+  100% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+
 @keyframes flameodd {
   0%, 100% {
     width: 0%;
@@ -66,6 +88,28 @@
     height: 0em; }
   8%, 100% {
     height: .5em; } }
+
+@keyframes flap {
+  0% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); }
+  50% {
+    bottom: 0%;
+    transform: skew(-50deg) rotate(45deg); }
+  100% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); } }
+
+@keyframes flapBack {
+  0% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+  50% {
+    top: 61%;
+    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+  100% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -177,6 +221,28 @@
   8%, 100% {
     height: .5em; } }
 
+@keyframes flap {
+  0% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); }
+  50% {
+    bottom: 0%;
+    transform: skew(-50deg) rotate(45deg); }
+  100% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); } }
+
+@keyframes flapBack {
+  0% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+  50% {
+    top: 61%;
+    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+  100% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+
 @keyframes flameodd {
   0%, 100% {
     width: 0%;
@@ -260,6 +326,28 @@
     height: 0em; }
   8%, 100% {
     height: .5em; } }
+
+@keyframes flap {
+  0% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); }
+  50% {
+    bottom: 0%;
+    transform: skew(-50deg) rotate(45deg); }
+  100% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); } }
+
+@keyframes flapBack {
+  0% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+  50% {
+    top: 61%;
+    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+  100% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -345,6 +433,88 @@
     cursor: pointer;
     user-select: none; }
 
+@keyframes blink {
+  0% {
+    height: .5em; }
+  4% {
+    height: 0em; }
+  8%, 100% {
+    height: .5em; } }
+
+@keyframes flap {
+  0% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); }
+  50% {
+    bottom: 0%;
+    transform: skew(-50deg) rotate(45deg); }
+  100% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); } }
+
+@keyframes flapBack {
+  0% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+  50% {
+    top: 61%;
+    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+  100% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+
+@keyframes flameodd {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 1%;
+    bottom: 2%; }
+  100% {
+    right: 150%;
+    bottom: 170%; } }
+
+@keyframes flameeven {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 2%;
+    bottom: 1%; }
+  100% {
+    right: 170%;
+    bottom: 150%; } }
+
 .c-character {
   font-size: 1rem;
   width: 5em;
@@ -405,6 +575,88 @@
     top: 70%;
     border-radius: 50%;
     transform: translate(-50%, -50%); }
+
+@keyframes blink {
+  0% {
+    height: .5em; }
+  4% {
+    height: 0em; }
+  8%, 100% {
+    height: .5em; } }
+
+@keyframes flap {
+  0% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); }
+  50% {
+    bottom: 0%;
+    transform: skew(-50deg) rotate(45deg); }
+  100% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); } }
+
+@keyframes flapBack {
+  0% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+  50% {
+    top: 61%;
+    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+  100% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+
+@keyframes flameodd {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 1%;
+    bottom: 2%; }
+  100% {
+    right: 150%;
+    bottom: 170%; } }
+
+@keyframes flameeven {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 2%;
+    bottom: 1%; }
+  100% {
+    right: 170%;
+    bottom: 150%; } }
 
 .c-bud {
   font-size: 1rem;
@@ -485,19 +737,111 @@
     transform: translate(-50%, -50%); }
   .c-bud__leaves {
     position: absolute;
-    bottom: 30%;
+    bottom: 70%;
     left: 50%;
     width: 70%;
     height: 70%;
-    transform: translateX(-50%) rotate(45deg); }
+    transform: translateX(-50%); }
   .c-bud__leaf {
     position: absolute;
-    right: 0%;
+    right: -37%;
+    bottom: -5%;
+    width: 100%;
+    height: 50%;
+    background-color: #539f6b;
+    border-radius: .25em;
+    transform: skew(-45deg) rotate(45deg);
+    animation: flap 2.5s ease infinite; }
+    .c-bud__leaf:nth-child(2n) {
+      transform: scaleX(-1) skew(-58deg) rotate(38deg);
+      right: 50%;
+      top: 56%;
+      width: 80%;
+      height: 30%;
+      background-color: #539f6b;
+      animation: flapBack 2.5s ease infinite; }
+
+@keyframes blink {
+  0% {
+    height: .5em; }
+  4% {
+    height: 0em; }
+  8%, 100% {
+    height: .5em; } }
+
+@keyframes flap {
+  0% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); }
+  50% {
     bottom: 0%;
+    transform: skew(-50deg) rotate(45deg); }
+  100% {
+    bottom: -5%;
+    transform: skew(-45deg) rotate(45deg); } }
+
+@keyframes flapBack {
+  0% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+  50% {
+    top: 61%;
+    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+  100% {
+    top: 56%;
+    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+
+@keyframes flameodd {
+  0%, 100% {
     width: 0%;
-    height: 0%;
-    background-color: #a3cfb1;
-    border-radius: 1vw; }
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 1%;
+    bottom: 2%; }
+  100% {
+    right: 150%;
+    bottom: 170%; } }
+
+@keyframes flameeven {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 100%;
+    height: 100%; }
+  0% {
+    background-color: #ffdc01;
+    z-index: 1000000; }
+  40% {
+    background-color: #ffac01;
+    z-index: 1000000; }
+  100% {
+    background-color: #f76379;
+    z-index: -10; }
+  0% {
+    right: 0%;
+    bottom: 0%; }
+  25% {
+    right: 2%;
+    bottom: 1%; }
+  100% {
+    right: 170%;
+    bottom: 150%; } }
 
 .c-spark {
   font-size: 1rem;
