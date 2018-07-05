@@ -11,6 +11,7 @@ $COLOR_1GRAY: lighten($COLOR_GRAY, 25);
 $COLOR_3GRAY: darken($COLOR_GRAY, 25);
 $COLOR_4GRAY: darken($COLOR_GRAY, 50);
 
+$COLOR_WHITE: #ffffff;
 $COLOR_GREEN: #a3cfb1;
 $COLOR_CORN: #f0d3a4;
 $COLOR_ORANGE: #ffac01;
@@ -29,6 +30,11 @@ $COLOR_0GREEN: lighten($COLOR_GREEN, 50);
 $COLOR_1GREEN: lighten($COLOR_GREEN, 25);
 $COLOR_3GREEN: darken($COLOR_GREEN, 25);
 $COLOR_4GREEN: darken($COLOR_GREEN, 50);
+
+$COLOR_0BLUE: lighten($COLOR_BLUE, 50);
+$COLOR_1BLUE: lighten($COLOR_BLUE, 25);
+$COLOR_3BLUE: darken($COLOR_BLUE, 25);
+$COLOR_4BLUE: darken($COLOR_BLUE, 50);
 
 //
 // Palettes

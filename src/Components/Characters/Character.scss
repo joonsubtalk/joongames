@@ -46,7 +46,6 @@
         height: $SIZE/8;
         border-radius: 50%;
         background-color: $COLOR_1BLACK;
-        animation: blink 3s infinite ease-in;
     }
     &__lefteye {
         @extend %eye-shared;
@@ -71,6 +70,18 @@
         top: 70%;
         border-radius: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+.c-character--blink {
+
+    .c-character {
+
+        &__lefteye,
+        &__righteye, {
+            animation: blink .25s infinite ease-in;
+        }
 
     }
+
 }

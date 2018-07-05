@@ -47,7 +47,6 @@
         height: $SIZE/8;
         border-radius: 50%;
         background-color: $COLOR_4RED;
-        animation: blink 3s infinite ease-in;
     }
     &__lefteye {
         @extend %eye-shared;
@@ -110,7 +109,7 @@
         width:0%;
         height:0%;
         background-color: $COLOR_YELLOW;
-        border-radius:1vw;
+        border-radius: .3em;
 
         &:nth-child(2n + 1) {
            animation: flameodd $ANIMATIONTIME ease-in infinite;
@@ -151,4 +150,17 @@
     //     top: 75%;
     //     transform: translate(-50%, -50%);
     // }
+}
+
+.c-spark--blink {
+
+    .c-spark {
+
+        &__lefteye,
+        &__righteye, {
+            animation: blink .25s infinite ease-in;
+        }
+
+    }
+
 }

@@ -1,0 +1,42 @@
+.o-summonbar {
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em; }
+  .o-summonbar__btn {
+    width: 8em;
+    height: 2.5em;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    user-select: none; }
+  .o-summonbar__meter {
+    width: 16em;
+    height: 2em;
+    border-radius: 10px;
+    background-color: #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7); }
+  .o-summonbar__empty {
+    width: 15.7em;
+    height: 1.8em;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    overflow: hidden; }
+  .o-summonbar__progress {
+    width: 10%;
+    height: 1.8em;
+    background-color: dodgerblue;
+    transition: width ease-in-out 500ms; }

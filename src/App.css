@@ -2,9 +2,9 @@
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -18,16 +18,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -80,13 +77,65 @@
   100% {
     right: 170%;
     bottom: 150%; } }
+
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
 
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -100,16 +149,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -162,21 +208,78 @@
   100% {
     right: 170%;
     bottom: 150%; } }
+
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
 
 .o-stage {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 525px;
+  height: 480px;
   width: 320px;
   margin: 0 auto;
   font-size: 1rem; }
   .o-stage__container {
-    height: 525px;
+    height: 480px;
     width: 320px; }
   .o-stage__camera {
-    height: 465px;
+    height: 420px;
+    width: 100%; }
+  .o-stage__hud {
+    margin-top: 2em;
     width: 100%;
+    height: 7em;
+    z-index: 3000;
     display: flex;
     align-items: flex-end; }
   .o-stage__buttons {
@@ -194,6 +297,9 @@
     color: #9e9e9e;
     cursor: pointer;
     user-select: none; }
+
+.o-stage--shake .o-stage__camera {
+  animation: shake .25s infinite ease-in; }
 
 .o-header {
   display: flex;
@@ -216,9 +322,9 @@
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -232,16 +338,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -294,6 +397,58 @@
   100% {
     right: 170%;
     bottom: 150%; } }
+
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
 
 .o-timer {
   height: 20px;
@@ -322,9 +477,9 @@
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -338,16 +493,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -401,20 +553,77 @@
     right: 170%;
     bottom: 150%; } }
 
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
+
 .o-stage {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 525px;
+  height: 480px;
   width: 320px;
   margin: 0 auto;
   font-size: 1rem; }
   .o-stage__container {
-    height: 525px;
+    height: 480px;
     width: 320px; }
   .o-stage__camera {
-    height: 465px;
+    height: 420px;
+    width: 100%; }
+  .o-stage__hud {
+    margin-top: 2em;
     width: 100%;
+    height: 7em;
+    z-index: 3000;
     display: flex;
     align-items: flex-end; }
   .o-stage__buttons {
@@ -433,12 +642,15 @@
     cursor: pointer;
     user-select: none; }
 
+.o-stage--shake .o-stage__camera {
+  animation: shake .25s infinite ease-in; }
+
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -452,16 +664,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -514,6 +723,58 @@
   100% {
     right: 170%;
     bottom: 150%; } }
+
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
 
 .c-character {
   font-size: 1rem;
@@ -554,8 +815,7 @@
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
-    background-color: #34383b;
-    animation: blink 3s infinite ease-in; }
+    background-color: #34383b; }
   .c-character__lefteye {
     position: absolute;
     left: 35%;
@@ -576,12 +836,15 @@
     border-radius: 50%;
     transform: translate(-50%, -50%); }
 
+.c-character--blink .c-character__lefteye, .c-character--blink .c-character__righteye {
+  animation: blink .25s infinite ease-in; }
+
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -595,16 +858,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -657,6 +917,58 @@
   100% {
     right: 170%;
     bottom: 150%; } }
+
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
 
 .c-bud {
   font-size: 1rem;
@@ -697,8 +1009,7 @@
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
-    background-color: #274c33;
-    animation: blink 3s infinite ease-in; }
+    background-color: #274c33; }
   .c-bud__lefteye {
     position: absolute;
     left: 35%;
@@ -737,36 +1048,43 @@
     transform: translate(-50%, -50%); }
   .c-bud__leaves {
     position: absolute;
-    bottom: 70%;
+    bottom: 90%;
     left: 50%;
     width: 70%;
     height: 70%;
-    transform: translateX(-50%); }
+    transform: translateX(-50%) rotate(20deg);
+    animation: flapPetal 2.5s ease-in-out infinite; }
   .c-bud__leaf {
     position: absolute;
     right: -37%;
     bottom: -5%;
-    width: 100%;
-    height: 50%;
+    width: 80%;
+    height: 30%;
     background-color: #539f6b;
-    border-radius: .25em;
-    transform: skew(-45deg) rotate(45deg);
-    animation: flap 2.5s ease infinite; }
-    .c-bud__leaf:nth-child(2n) {
+    border-radius: .75em;
+    transform: skew(-45deg) rotate(45deg); }
+    .c-bud__leaf:nth-child(2) {
       transform: scaleX(-1) skew(-58deg) rotate(38deg);
-      right: 50%;
-      top: 56%;
-      width: 80%;
-      height: 30%;
-      background-color: #539f6b;
-      animation: flapBack 2.5s ease infinite; }
+      right: 11%;
+      top: 78%; }
+  .c-bud__plume {
+    height: 1.25em;
+    width: .5em;
+    background-color: #274c33;
+    position: absolute;
+    right: 49%;
+    bottom: -40%;
+    border-radius: 50%; }
+
+.c-bud--blink .c-bud__lefteye, .c-bud--blink .c-bud__righteye {
+  animation: blink .25s infinite ease-in; }
 
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -780,16 +1098,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -843,6 +1158,58 @@
     right: 170%;
     bottom: 150%; } }
 
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
+
 .c-spark {
   font-size: 1rem;
   width: 5em;
@@ -882,8 +1249,7 @@
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
-    background-color: #570411;
-    animation: blink 3s infinite ease-in; }
+    background-color: #570411; }
   .c-spark__lefteye {
     position: absolute;
     left: 35%;
@@ -934,7 +1300,7 @@
     width: 0%;
     height: 0%;
     background-color: #ffdc01;
-    border-radius: 1vw; }
+    border-radius: .3em; }
     .c-spark__flame:nth-child(2n + 1) {
       animation: flameodd 1.5s ease-in infinite; }
     .c-spark__flame:nth-child(2n) {
@@ -947,6 +1313,173 @@
       animation-delay: 0.75s; }
     .c-spark__flame:nth-child(4) {
       animation-delay: 1.125s; }
+
+.c-spark--blink .c-spark__lefteye, .c-spark--blink .c-spark__righteye {
+  animation: blink .25s infinite ease-in; }
+
+.c-drop {
+  font-size: 1rem;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  left: 0;
+  top: 0; }
+  .c-drop__head {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: #005380;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .c-drop__fronthead {
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: #80d2ff;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .c-drop__frontshadow {
+    overflow: hidden;
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    background-color: #01a5ff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .c-drop .c-drop__lefteye, .c-drop .c-drop__righteye {
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background-color: #005380; }
+  .c-drop__lefteye {
+    position: absolute;
+    left: 35%;
+    top: 60%;
+    transform: translate(-50%, -50%); }
+  .c-drop__righteye {
+    position: absolute;
+    left: 65%;
+    top: 60%;
+    transform: translate(-50%, -50%); }
+  .c-drop__shadow {
+    width: 4em;
+    height: 1em;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); }
+  .c-drop__mouth {
+    height: 4em;
+    width: 1em;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+    border: 0.1em solid #005380; }
+  .c-drop__mouthcontainer {
+    height: 0.66667em;
+    width: 1em;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%); }
+  .c-drop__droplets {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%); }
+  .c-drop__droplet {
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    width: 90%;
+    height: 90%;
+    animation: fizzing 3s ease-out infinite;
+    border-radius: 0 6em 6em;
+    transform: translateX(-50%) rotate(45deg); }
+    .c-drop__droplet:nth-child(2) {
+      bottom: 10%;
+      width: 90%;
+      height: 90%;
+      animation-delay: 1.5s; }
+
+.c-drop--blink .c-drop__lefteye, .c-drop--blink .c-drop__righteye {
+  animation: blink .25s infinite ease-in; }
+
+@keyframes fizzing {
+  0% {
+    bottom: 17%;
+    width: 90%;
+    height: 90%;
+    background-color: #01a5ff;
+    transform: scaleY(1.05) translateX(-50%) rotate(45deg); }
+  50% {
+    bottom: 30%;
+    width: 60%;
+    height: 60%;
+    background-color: #80d2ff;
+    z-index: 9999; }
+  100% {
+    bottom: 17%;
+    width: 90%;
+    height: 90%;
+    background-color: #01a5ff;
+    transform: scaleY(1.05) translateX(-50%) rotate(45deg); } }
+
+.o-summonbar {
+  font-size: 1rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em; }
+  .o-summonbar__btn {
+    width: 8em;
+    height: 2.5em;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    user-select: none; }
+  .o-summonbar__meter {
+    width: 16em;
+    height: 2em;
+    border-radius: 10px;
+    background-color: #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7); }
+  .o-summonbar__empty {
+    width: 15.7em;
+    height: 1.8em;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    overflow: hidden; }
+  .o-summonbar__progress {
+    width: 10%;
+    height: 1.8em;
+    background-color: dodgerblue;
+    transition: width ease-in-out 500ms; }
 
 body {
   font-size: 21px;

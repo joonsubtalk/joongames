@@ -1,9 +1,9 @@
 @keyframes blink {
   0% {
     height: .5em; }
-  4% {
+  50% {
     height: 0em; }
-  8%, 100% {
+  100% {
     height: .5em; } }
 
 @keyframes flap {
@@ -17,16 +17,13 @@
     bottom: -5%;
     transform: skew(-45deg) rotate(45deg); } }
 
-@keyframes flapBack {
+@keyframes flapPetal {
   0% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); }
+    transform: translateX(-50%) rotate(20deg); }
   50% {
-    top: 61%;
-    transform: scaleX(-1) skew(-53deg) rotate(38deg); }
+    transform: translateX(-55%) rotate(15deg); }
   100% {
-    top: 56%;
-    transform: scaleX(-1) skew(-58deg) rotate(38deg); } }
+    transform: translateX(-50%) rotate(20deg); } }
 
 @keyframes flameodd {
   0%, 100% {
@@ -80,6 +77,58 @@
     right: 170%;
     bottom: 150%; } }
 
+@keyframes bubbling {
+  0%, 100% {
+    width: 0%;
+    height: 0%; }
+  25% {
+    width: 120%;
+    height: 120%; }
+  0% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 0; }
+  40% {
+    background-color: #80d2ff;
+    z-index: 1000000;
+    opacity: 1; }
+  100% {
+    background-color: #ffffff;
+    z-index: -10; }
+  0% {
+    right: 25%;
+    bottom: 25%; }
+  25% {
+    right: -26%;
+    bottom: -26%; }
+  100% {
+    right: 130%;
+    bottom: 130%; } }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
+
 .c-spark {
   font-size: 1rem;
   width: 5em;
@@ -119,8 +168,7 @@
     width: 0.5em;
     height: 0.5em;
     border-radius: 50%;
-    background-color: #570411;
-    animation: blink 3s infinite ease-in; }
+    background-color: #570411; }
   .c-spark__lefteye {
     position: absolute;
     left: 35%;
@@ -171,7 +219,7 @@
     width: 0%;
     height: 0%;
     background-color: #ffdc01;
-    border-radius: 1vw; }
+    border-radius: .3em; }
     .c-spark__flame:nth-child(2n + 1) {
       animation: flameodd 1.5s ease-in infinite; }
     .c-spark__flame:nth-child(2n) {
@@ -184,3 +232,6 @@
       animation-delay: 0.75s; }
     .c-spark__flame:nth-child(4) {
       animation-delay: 1.125s; }
+
+.c-spark--blink .c-spark__lefteye, .c-spark--blink .c-spark__righteye {
+  animation: blink .25s infinite ease-in; }
