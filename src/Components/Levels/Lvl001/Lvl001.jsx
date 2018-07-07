@@ -11,7 +11,12 @@ class Level001 extends Component {
     state = {
         level: 0,
         title: 'Once upon a time...',
-        shake: false
+        shake: false,
+        currentTime: 0,
+        lastTime: 0,
+        delta: 0,
+        interval: 1000/60,
+        isPaused: false,
     }
 
     componentDidMount() {
@@ -19,7 +24,8 @@ class Level001 extends Component {
     }
 
     update = () => {
-
+        this.setState({level : ++this.state.level})
+        console.log(this.state.level);
     }
 
     draw = () => {
@@ -28,9 +34,27 @@ class Level001 extends Component {
     }
 
     loop = () => {
-        this.update();
-        this.draw();
-        requestAnimationFrame(this.loop);
+
+        const currentLoopTime = new Date().getTime();
+        const currentDelta = currentLoopTime - this.state.lastTime;
+
+        if (!this.state.isPaused)
+            requestAnimationFrame(this.loop);
+
+        this.setState({
+            currentTime : currentLoopTime,
+            delta : currentDelta
+        });
+        
+        if (currentDelta > this.state.interval) {
+
+            this.update();
+            this.draw();
+
+            this.setState({
+                lastTime : currentLoopTime - (currentDelta % this.state.interval)
+            });
+        }
     }
 
     btnHandler = (e) => {
@@ -39,6 +63,12 @@ class Level001 extends Component {
         setTimeout(()=>{
             this.setState({shake: false});
         }, 200);
+
+        if (this.state.isPaused)
+            requestAnimationFrame(this.loop);
+        this.setState({
+            isPaused : !this.state.isPaused
+        });
     }
 
     summonHandler = (e) => {

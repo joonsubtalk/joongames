@@ -8,9 +8,12 @@ export default class SummonBar extends Component {
     }
 
     holdTimerFn = () => {
-        const newPower = this.state.power + 2;
+        const powerInc = 1;
+        const newPower = this.state.power + powerInc > 100
+            ? 100
+            : this.state.power + powerInc;
+
         this.setState({power : newPower});
-        console.log('holding');
     }
 
     pressHandler = () => {
@@ -18,8 +21,6 @@ export default class SummonBar extends Component {
         this.setState({holdIntervalFn : () => {}});
 
         this.setState({holdIntervalFn : setInterval(this.holdTimerFn, 50)});
-
-        console.log('down');
     }
 
     releaseHandler = () => {
