@@ -4,25 +4,29 @@ export default class SummonBar extends Component {
 
     state = {
         power : 0,
-        timer : () => {}
+        holdIntervalFn : () => {}
     }
 
-    theTimer = () => {
-        if (this.state.power > 100) {
-            this.setState({power : 0})
-        }
-        this.setState({power : this.state.power += 2})
+    holdTimerFn = () => {
+        const newPower = this.state.power + 2;
+        this.setState({power : newPower});
+        console.log('holding');
     }
-    stopTimer = () => {
-        clearInterval(this.state.timer);
-    }
+
     pressHandler = () => {
-        const pressedTimerFunc = setInterval(this.theTimer, 250);
-        this.setState({timer : pressedTimerFunc});
-        this.props.summonFunc();
+        clearInterval(this.state.holdIntervalFn);
+        this.setState({holdIntervalFn : () => {}});
+
+        this.setState({holdIntervalFn : setInterval(this.holdTimerFn, 50)});
+
+        console.log('down');
     }
+
     releaseHandler = () => {
-        clearInterval(this.state.timer);
+        console.log('leave');
+
+        clearInterval(this.state.holdIntervalFn);
+        this.setState({power: 0, holdIntervalFn : () => {}});
     }
 
   render() {
@@ -38,7 +42,10 @@ export default class SummonBar extends Component {
         </div>
         <div className="o-summonbar__btn"
         onMouseDown ={this.pressHandler}
-        onMouseLeave={this.releaseHandler}>Summon</div>
+        onMouseLeave={this.releaseHandler}
+        onMouseUp={this.releaseHandler}>
+            <span className="o-summonbar__text">Summon</span>
+        </div>
       </div>
     )
   }

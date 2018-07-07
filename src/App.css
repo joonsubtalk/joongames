@@ -1460,6 +1460,8 @@
     cursor: pointer;
     outline: none;
     user-select: none; }
+  .o-summonbar__text {
+    pointer-events: none; }
   .o-summonbar__meter {
     width: 16em;
     height: 2em;
